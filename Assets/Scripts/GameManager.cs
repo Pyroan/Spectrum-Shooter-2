@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            SceneManager.LoadScene(0);
+            Destroy(gameObject);
         }
 
         if (state == GameState.STARTING)
