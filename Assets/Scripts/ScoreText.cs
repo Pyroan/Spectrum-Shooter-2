@@ -11,7 +11,7 @@ public class ScoreText : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-        text.text = "You lost, but you killed " + FindObjectOfType<GameManager>().GetScore() + " glowing balls, so I guess you have that going for you";
+        text.text = "You lost, but you killed <color=magenta>" + FindObjectOfType<GameManager>().GetScore() + "</color> glowing balls, so I guess you have that going for you";
     }
 
     // Update is called once per frame
