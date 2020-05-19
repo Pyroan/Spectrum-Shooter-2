@@ -91,7 +91,9 @@ MonoBehaviour:
     type: 2}
   chromasplosionType: {fileID: 114827149389821886, guid: e6f71db0b32507640a6329c81517b532,
     type: 2}
+  repeatRate: 8
   splosions: 3
+  volumeGetter: {fileID: 0}
 --- !u!212 &212933412135630032
 SpriteRenderer:
   m_ObjectHideFlags: 1

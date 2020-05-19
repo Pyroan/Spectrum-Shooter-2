@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 50898b93dae00c44fafbb85057714f11
+timeCreated: 1589860622
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arcade Normal
+  fontNames:
+  - Arcade Normal
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

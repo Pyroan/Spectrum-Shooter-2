@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Backspace))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 Destroy(gameObject);
             }
         }
@@ -113,6 +113,6 @@ public class GameManager : MonoBehaviour
     {
         Camera.main.GetComponent<Animator>().SetTrigger("End Game");
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e82ea03a09192e54b93a699b1be5d616
+timeCreated: 1589860023
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Linear Beam
+  fontNames:
+  - Linear Beam
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

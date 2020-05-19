@@ -56,3 +56,4 @@ MonoBehaviour:
   shieldtype: {fileID: 114655701682029996, guid: 5d7f1a210c1cc1c4caf516e3c55a86c9,
     type: 2}
   shieldSpeed: 5
+  spawnspeed: 0.05
