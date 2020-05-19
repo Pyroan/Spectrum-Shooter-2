@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastFire;
 
     public int splosions = 3;
-    // public VolumeGetter volumeGetter;
-    // Vector3 targetScale;
+    public VolumeGetter volumeGetter;
+    Vector3 targetScale;
 
     void Start()
     {
-        // volumeGetter = GetComponent<VolumeGetter>();
+        volumeGetter = GetComponent<VolumeGetter>();
     }
 
 
@@ -49,12 +49,16 @@ public class PlayerController : MonoBehaviour
             splosions--;
             Instantiate(chromasplosionType, transform.position, transform.rotation, transform);
         }
+    }
+
+    void LateUpdate()
+    {
         // // Change size to match music (hopefully)
         // Vector3 v = transform.localScale;
-        // v.x = 1 + (volumeGetter.GetClipLoudness() * 2f - .5f);
-        // v.y = 1 + (volumeGetter.GetClipLoudness() * 2f - .5f);
+        // v.x = 1 + (volumeGetter.GetClipLoudness() * 10f);
+        // v.y = 1 + (volumeGetter.GetClipLoudness() * 10f);
         // targetScale = v;
-        // transform.localScale = Vector3.Lerp(transform.localScale, targetScale, .2f);
+        // transform.localScale = Vector3.Lerp(transform.localScale, targetScale, .1f);
     }
 
     void FixedUpdate()
