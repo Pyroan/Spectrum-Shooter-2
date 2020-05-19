@@ -5,27 +5,26 @@ using UnityEngine.SceneManagement;
 public class MenuHandler : MonoBehaviour
 {
 
-    Animator animator;
-    void Start()
+    public void MainMenu()
     {
-        animator = GetComponentInChildren<Animator>();
+        SceneManager.LoadScene(0);
+
     }
     public void StartGame()
     {
-        print("Um hello?");
         StartCoroutine(GameStart());
     }
 
     IEnumerator GameStart()
     {
-        animator.SetTrigger("Fade Out");
+        GetComponentInChildren<Animator>().SetTrigger("Fade Out");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(1);
     }
 
     public void Instructions()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
     public void Options()
     {
