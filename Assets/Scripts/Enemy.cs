@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     Vector2 velocity;
     Color color;
     public float fadeDuration = 1f;
-    Color flashColor = Color.white;
+    Color flashColor;
     float fadeAmount = 0f;
     bool isAlive;
     // Use this for initialization
@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         color = Color.HSVToRGB(Random.value, 1f, 1f);
         sr.color = color;
+        flashColor = color;
         corpse = GetComponentInChildren<ShatteredEnemy>();
         corpse.SetColor(sr.color);
         isAlive = true;
