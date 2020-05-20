@@ -34,7 +34,7 @@ public class Filter : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Camera.main.backgroundColor = Color.Lerp(sr.color, Color.black, .5f);
+            Camera.main.GetComponent<CameraController>().FlashColor(Color.Lerp(sr.color, Color.black, .5f));
             Destroy(gameObject);
         }
     }

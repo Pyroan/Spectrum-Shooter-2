@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     ShatteredEnemy corpse;
     Vector2 velocity;
     Color color;
+    public float fadeDuration = 1f;
+    Color flashColor = Color.white;
+    float fadeAmount = 0f;
     bool isAlive;
     // Use this for initialization
     void Start()
@@ -33,7 +36,11 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        sr.color = Color.Lerp(sr.color, color, .03f);
+        if (fadeAmount < fadeDuration)
+        {
+            sr.color = Color.Lerp(flashColor, color, fadeAmount / fadeDuration);
+            fadeAmount += Time.deltaTime;
+        }
     }
     void FixedUpdate()
     {
@@ -79,7 +86,8 @@ public class Enemy : MonoBehaviour
             // Move back and shake screen based on how intense the damage was
             rb.AddForce(-velocity * (r * maxKnockback), ForceMode2D.Impulse);
             Camera.main.GetComponent<CameraController>().Shake(r);
-            sr.color = Color.Lerp(color, Color.white, .1f + r);
+            flashColor = Color.Lerp(color, Color.white, .1f + r);
+            fadeAmount = 0;
         }
         else if (other.gameObject.tag == "Filter" && isAlive)
         {
