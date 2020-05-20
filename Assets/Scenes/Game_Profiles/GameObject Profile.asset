@@ -17,12 +17,12 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   spectralLut:
-    overrideState: 0
+    overrideState: 1
     value: {fileID: 0}
     defaultState: 1
   intensity:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.086
   fastMode:
     overrideState: 0
     value: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     value: 7
   anamorphicRatio:
     overrideState: 0
-    value: 0
+    value: 0.35
   color:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -68,11 +68,11 @@ MonoBehaviour:
     value: 0
   dirtTexture:
     overrideState: 0
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: db7a10f997adc9e4180418797111adea, type: 3}
     defaultState: 1
   dirtIntensity:
     overrideState: 0
-    value: 0
+    value: 2.65
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

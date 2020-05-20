@@ -12,8 +12,11 @@ public class CameraController : MonoBehaviour
     public float amplitude = 1f;
     public float duration = .2f;
 
-    public float startShakeTime;
-    public float endShakeTime;
+    public float fadeDuration = 10f;
+    Color flashColor = Color.black;
+    float fadeAmount = 0f;
+    float startShakeTime;
+    float endShakeTime;
 
     private Camera cam;
     // Use this for initialization
@@ -45,8 +48,12 @@ public class CameraController : MonoBehaviour
         }
         transform.position = new Vector3(pos.x, pos.y, -1);
 
-        // Update color
-        cam.backgroundColor = Color.Lerp(cam.backgroundColor, Color.black, .05f);
+        if (fadeAmount < fadeDuration)
+        {
+            // Update color
+            cam.backgroundColor = Color.Lerp(flashColor, Color.black, fadeAmount / fadeDuration);
+            fadeAmount += Time.deltaTime;
+        }
     }
 
     /**
@@ -57,5 +64,11 @@ public class CameraController : MonoBehaviour
         amplitude = defaultAmplitude * Mathf.Clamp(percent, 0, 1);
         startShakeTime = Time.time;
         endShakeTime = Time.time + duration;
+    }
+
+    public void FlashColor(Color color)
+    {
+        flashColor = color;
+        fadeAmount = 0.0f;
     }
 }
