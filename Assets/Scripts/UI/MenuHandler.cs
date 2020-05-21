@@ -28,7 +28,7 @@ public class MenuHandler : MonoBehaviour
     }
     public void Options()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
     }
 
     public void Quit()
