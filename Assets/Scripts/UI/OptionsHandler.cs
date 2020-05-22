@@ -9,7 +9,7 @@ public class OptionsHandler : MonoBehaviour
 
     public void Confirm()
     {
-        // PlayerPrefs.Save();
+        PlayerPrefs.Save();
         SceneManager.LoadScene(0);
     }
 
