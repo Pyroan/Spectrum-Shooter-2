@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         endShakeTime = Time.time;
+        GetComponent<AudioSource>().mute = PlayerPrefs.GetInt(PreferenceKeys.PLAY_MUSIC) == 0;
     }
 
     // Update is called once per frame
@@ -61,14 +62,20 @@ public class CameraController : MonoBehaviour
      */
     public void Shake(float percent)
     {
-        amplitude = defaultAmplitude * Mathf.Clamp(percent, 0, 1);
-        startShakeTime = Time.time;
-        endShakeTime = Time.time + duration;
+        if (PlayerPrefs.GetInt(PreferenceKeys.SHAKE_SCREEN, 1) == 1)
+        {
+            amplitude = defaultAmplitude * Mathf.Clamp(percent, 0, 1);
+            startShakeTime = Time.time;
+            endShakeTime = Time.time + duration;
+        }
     }
 
     public void FlashColor(Color color)
     {
-        flashColor = color;
-        fadeAmount = 0.0f;
+        if (PlayerPrefs.GetInt(PreferenceKeys.FLASH_COLORS, 1) == 1)
+        {
+            flashColor = color;
+            fadeAmount = 0.0f;
+        }
     }
 }
