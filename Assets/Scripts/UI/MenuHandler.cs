@@ -10,6 +10,9 @@ public class MenuHandler : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+    /************************
+     * Title Screen Buttons *
+     ************************/
     public void StartGame()
     {
         StartCoroutine(GameStart());

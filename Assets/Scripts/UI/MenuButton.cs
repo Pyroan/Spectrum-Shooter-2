@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class MenuButton : MonoBehaviour
 {
 
-    Text text;
+    protected Text text;
     public float offset;
     public bool hovering = false;
     // Use this for initialization
-    void Start()
+    virtual protected void Start()
     {
         text = GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (hovering)
         {
