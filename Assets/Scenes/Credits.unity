@@ -689,14 +689,15 @@ MonoBehaviour:
 
     music by <b>Kaz</b>
 
+    playtested
+    by <b>micperson</b>, <b>firstpoke</b>, <b>Eyrwen</b>, <b>Reldnahc</b>, and <b>Kaz</b>
+
     based
     on "Spectrum Shooter", by <b>Zachary Thompson</b>
 
-    playtested by <b>micperson</b>,
-    <b>firstpoke</b>, <b>Eyrwen</b>, and <b>Kaz</b>
 
-
-    thank you for playing <3'
+    thank you for playing
+    <3'
 --- !u!222 &1467715812
 CanvasRenderer:
   m_ObjectHideFlags: 0
