@@ -17,9 +17,11 @@ public class PlayerController : MonoBehaviour
     public VolumeGetter volumeGetter;
     Vector3 targetScale;
 
+    bool zenMode;
     void Start()
     {
         volumeGetter = GetComponent<VolumeGetter>();
+        zenMode = PlayerPrefs.GetInt(PreferenceKeys.ZEN_MODE, 0) == 1;
     }
 
 
@@ -32,17 +34,16 @@ public class PlayerController : MonoBehaviour
             timeSinceLastFire = 0.0f;
 
         }
-        // TODO: Zen Mode
         // Auto repeat so people don't break their fingers off
-        // if (Input.GetMouseButton(0))
-        // {
-        //     timeSinceLastFire += Time.deltaTime;
-        //     if (timeSinceLastFire > 1 / repeatRate)
-        //     {
-        //         Instantiate(bulletType, transform.position, transform.rotation);
-        //         timeSinceLastFire = 0.0f;
-        //     }
-        // }
+        else if (/*Input.GetMouseButton(0) && */ zenMode)
+        {
+            timeSinceLastFire += Time.deltaTime;
+            if (timeSinceLastFire > 1 / repeatRate)
+            {
+                Instantiate(bulletType, transform.position, transform.rotation);
+                timeSinceLastFire = 0.0f;
+            }
+        }
         // Chromasplosion or whatever i'm calling it
         if (Input.GetKeyDown(KeyCode.Space) && splosions > 0 && GetComponentInChildren<Chromasplosion>() == null)
         {

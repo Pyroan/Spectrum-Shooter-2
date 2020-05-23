@@ -8,7 +8,7 @@ using UnityEngine;
  */
 public class PreferenceKeys : MonoBehaviour
 {
-
+    public const string ZEN_MODE = "zen_mode";
     public const string FLASH_COLORS = "flash_colors";
     public const string SHAKE_SCREEN = "screen_shake";
     public const string CONTROL_HINTS = "control_hints";
