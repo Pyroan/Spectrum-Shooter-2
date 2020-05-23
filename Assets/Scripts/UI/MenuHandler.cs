@@ -13,12 +13,21 @@ public class MenuHandler : MonoBehaviour
     /************************
      * Title Screen Buttons *
      ************************/
-    public void StartGame()
+    public void StartGame(bool transition)
     {
-        StartCoroutine(GameStart());
+        if (transition)
+        {
+            StartCoroutine(TransitionToGame());
+
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
+
     }
 
-    IEnumerator GameStart()
+    IEnumerator TransitionToGame()
     {
         GetComponentInChildren<Animator>().SetTrigger("Fade Out");
         yield return new WaitForSeconds(2.0f);
