@@ -16,3 +16,14 @@ public class PreferenceKeys : MonoBehaviour
     public const string PLAY_MUSIC = "music_enabled";
     public const string PLAY_SOUND = "sound_enabled";
 }
+
+public class Scenes : MonoBehaviour
+{
+    public const int WARNING = 0;
+    public const int TITLE_SCREEN = 1;
+    public const int GAME = 2;
+    public const int SCORE_SCREEN = 3;
+    public const int INSTRUCTIONS = 4;
+    public const int OPTIONS = 5;
+    public const int CREDITS = 6;
+}
