@@ -10,12 +10,12 @@ public class OptionsHandler : MonoBehaviour
     public void Confirm()
     {
         PlayerPrefs.Save();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(Scenes.TITLE_SCREEN);
     }
 
     public void Cancel()
     {
         // fuck how do i invert this.
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(Scenes.TITLE_SCREEN);
     }
 }

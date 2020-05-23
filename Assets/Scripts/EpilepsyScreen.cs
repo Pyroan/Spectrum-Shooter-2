@@ -20,7 +20,7 @@ public class EpilepsyScreen : MonoBehaviour
         yield return new WaitForSeconds(timeOnscreen);
         animator.SetTrigger("Fade Out");
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(Scenes.TITLE_SCREEN);
 
     }
 }
