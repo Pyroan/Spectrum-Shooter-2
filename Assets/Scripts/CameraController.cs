@@ -24,7 +24,11 @@ public class CameraController : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         endShakeTime = Time.time;
-        GetComponent<AudioSource>().mute = PlayerPrefs.GetInt(PreferenceKeys.PLAY_MUSIC) == 0;
+        AudioSource audio = GetComponent<AudioSource>();
+        if (audio != null)
+        {
+            GetComponent<AudioSource>().mute = PlayerPrefs.GetInt(PreferenceKeys.PLAY_MUSIC) == 0;
+        }
     }
 
     // Update is called once per frame
