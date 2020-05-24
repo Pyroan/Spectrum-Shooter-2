@@ -20,7 +20,7 @@ public class MenuHandler : MonoBehaviour
         {
             // Fun fact this isn't actually destroying the gm.
             // dude i have no idea what to do about this.
-            Destroy(gm);
+            Destroy(gm.gameObject);
         }
         if (transition)
         {
