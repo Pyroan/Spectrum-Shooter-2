@@ -86,8 +86,11 @@ public class Enemy : MonoBehaviour
                     r = .1f;
                 }
             }
-            audioSource.pitch = r * .5f + .5f;
-            audioSource.Play();
+            if (PlayerPrefs.GetInt(PreferenceKeys.PLAY_SOUND, 1) == 1)
+            {
+                audioSource.pitch = r * .5f + .5f;
+                audioSource.Play();
+            }
             health -= (int)(maxHealth * r);
             if (health <= 0)
             {
