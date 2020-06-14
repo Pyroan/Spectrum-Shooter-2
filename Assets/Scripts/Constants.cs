@@ -15,6 +15,8 @@ public class PreferenceKeys : MonoBehaviour
 
     public const string PLAY_MUSIC = "music_enabled";
     public const string PLAY_SOUND = "sound_enabled";
+
+    public const string HIGH_SCORE = "high_score";
 }
 
 public class Scenes : MonoBehaviour
