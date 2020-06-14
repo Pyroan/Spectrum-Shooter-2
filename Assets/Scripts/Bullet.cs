@@ -9,6 +9,15 @@ public class Bullet : MonoBehaviour
     ParticleSystem ps;
     SpriteRenderer sr;
     Rigidbody2D rb;
+    AudioSource audioSource;
+
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.pitch = Random.Range(.9f, 1.1f);
+    }
+
     // Use this for initialization
     void Start()
     {
