@@ -1408,7 +1408,7 @@ RectTransform:
   m_Children:
   - {fileID: 1596467967}
   m_Father: {fileID: 1515971748}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1666,8 +1666,8 @@ RectTransform:
   - {fileID: 240245623}
   - {fileID: 859263241}
   - {fileID: 354900035}
-  - {fileID: 1180166691}
   - {fileID: 1962092222}
+  - {fileID: 1180166691}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1712,8 +1712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115.555565, y: 89.694046}
-  m_SizeDelta: {x: 800, y: 450.13}
+  m_AnchoredPosition: {x: 169.4, y: 89.694046}
+  m_SizeDelta: {x: 907.6908, y: 450.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1596467968
 CanvasGroup:
@@ -1981,7 +1981,7 @@ GameObject:
   - component: {fileID: 1962092224}
   - component: {fileID: 1962092223}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Bananaduck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1999,7 +1999,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1515971748}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

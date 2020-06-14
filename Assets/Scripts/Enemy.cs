@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     ShatteredEnemy corpse;
     Vector2 velocity;
+
+    public Text scoretext;
+    AudioSource audioSource;
+
     Color color;
     public float fadeDuration = 1f;
     Color flashColor;
@@ -29,6 +34,8 @@ public class Enemy : MonoBehaviour
         corpse = GetComponentInChildren<ShatteredEnemy>();
         corpse.SetColor(sr.color);
         isAlive = true;
+
+        audioSource = GetComponent<AudioSource>();
 
         rb = GetComponent<Rigidbody2D>();
         velocity = -transform.position.normalized * speed;
@@ -79,6 +86,8 @@ public class Enemy : MonoBehaviour
                     r = .1f;
                 }
             }
+            audioSource.pitch = r * .5f + .5f;
+            // audioSource.Play();
             health -= (int)(maxHealth * r);
             if (health <= 0)
             {
@@ -105,5 +114,8 @@ public class Enemy : MonoBehaviour
         dir.Normalize();
         corpse.Shatter(-dir);
         FindObjectOfType<GameManager>().IncrementScore();
+        Text t = Instantiate(scoretext, FindObjectOfType<Canvas>().transform);
+        t.transform.position = transform.position;
+        t.text = "" + FindObjectOfType<GameManager>().GetScore();
     }
 }

@@ -844,8 +844,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You lost, but you killed <b>several</b> glowing balls, so I guess you have
-    that going for you
+  m_Text: '1. pretend i''m - 129
+
+    2. uh - 127
+
+    3. this isn''t great - 69
+
+'
 --- !u!222 &1465243159
 CanvasRenderer:
   m_ObjectHideFlags: 0
