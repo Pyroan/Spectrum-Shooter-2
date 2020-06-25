@@ -34,7 +34,7 @@ public class Shield : MonoBehaviour
                 component.z
                 );
             Filter newSegment = Instantiate(shieldtype, pos + rotated, Quaternion.AngleAxis(theta + 90, Vector3.forward), transform);
-            newSegment.GetComponent<SpriteRenderer>().color = Color.HSVToRGB((angleStep * i) / 360, 1f, 1f);
+            newSegment.GetComponent<SpriteRenderer>().color = Color.HSVToRGB((float)i / shieldsegments, 1f, 1f);
 
             yield return new WaitForSeconds(spawnspeed);
         }
